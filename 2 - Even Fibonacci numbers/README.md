@@ -17,3 +17,28 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 My first thoughts here are to create two arrays. The first array will create the fib sequence normally, then the second array will contain the first ten even numbers that are generated.
 
 #### How do I go about that?
+
+- Create the first array for the fib sequence (fibArr) and populate it - how many times?
+- Create the second array (fibEven) to contain just even numbers from fibArr.
+- Add all the numbers in fibEven
+
+#### How many times do I run the sequence for fibArr
+
+I need fibEven to contain 10 numbers.
+
+Run the fibArr sequence in a loop until there are 10 items in the fibEven array
+
+    fibArr[]
+    fibEven[]
+
+    loop until there are 10 items in fibEven
+        run fibArr sequence
+        check if the result is an even number and if so add it to fibEven
+
+So, to begin let's create 2 empty arrays (fibArr and fibEven)
+
+create a function that runs the fib sequence, then checks the result. If the result is even, add it to fibEven
+
+Now wrap the entire function in a loop that checks the number of items in fibEven. When the number of items reaches 10 break the loop.
+
+Finally, add all the numbers up in fibEven. This should be the answer to the problem.
