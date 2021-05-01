@@ -6,13 +6,15 @@ Create a loop to calculate the result of the number 13195 divided by every integ
 Task list:
     Create a loop
         Calculate the result of the sample number divided by the loop iteration
-        Print out the results 
+        Print out the results
+
+    Ok, 35 coming back evenly divided.
 
 */
 
 // Declare variables
 const sampleNumber = 13195;
-const iterations = 20;
+const iterations = 1000000;
 let currentCalc = 0;
 
 // Create a loop
@@ -20,7 +22,9 @@ let currentCalc = 0;
 const testRemainder = () => {
   for (i = 1; i <= iterations; i++) {
     currentCalc = sampleNumber / i;
-    console.log(`${sampleNumber} / ${i} = ${currentCalc}`);
+    if (currentCalc % 1 == 0) {
+      console.log(`${sampleNumber} / ${i} = ${currentCalc}`);
+    }
   }
 };
 
