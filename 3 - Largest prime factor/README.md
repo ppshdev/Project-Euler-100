@@ -43,7 +43,7 @@ Probably is, it's about checking whether a calculated number is an iteger or a f
 
 [A web page](https://stackoverflow.com/questions/2304052/check-if-a-number-has-a-decimal-place-is-a-whole-number)
 
-Ok, got it sorted. Numbers well over a million, and I've been drinking whisky so I don't know what the results mean.
+Ok, got it sorted. Numbers well over a million, but I've been drinking whisky so I don't know what the results mean.
 
 Time to call it a day. It's now 2:56AM and I've been on this computer since 8AM (apart from going food shopping after lunch).
 
