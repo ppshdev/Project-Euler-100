@@ -13,17 +13,19 @@ Task list:
 */
 
 // Declare variables
-const sampleNumber = 13195;
+const sampleNumber = 600851475143;
 const iterations = 1000000;
 let currentCalc = 0;
+const results = document.getElementById("results");
 
 // Create a loop
 // Let's put this in a function to keep things tidy
 const testRemainder = () => {
-  for (i = 1; i <= iterations; i++) {
+  for (i = 2; i <= iterations; i++) {
     currentCalc = sampleNumber / i;
-    if (currentCalc % 1 == 0) {
-      console.log(`${sampleNumber} / ${i} = ${currentCalc}`);
+    if (currentCalc % 1 === 0) {
+      results.innerHTML += `${sampleNumber} / ${i} = ${currentCalc}<br />`;
+      // console.log(`${sampleNumber} / ${i} = ${currentCalc}`);
     }
   }
 };
