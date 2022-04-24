@@ -3,16 +3,12 @@
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 limit = 10
+active = True
 
-for i in range(1, limit):
-    j = 1
-    run = True
-    while run:
-        if i % j == 0:
-            j += 1
-            print(f"{i} % {j}")
-        else:
-            # print("Nope")
-            # print(f"{i} % {j}")
-            # print()
-            run = False
+while active:
+    result = 1
+    for i in range(1, limit + 1):
+        print(i)
+        if result % i == 0:
+            active = False
+        result += 1
