@@ -2,26 +2,38 @@
 
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
-limit = 5
-active = True
-test_num = 1
+iter_number = 5
+start_num = iter_number * 2
+keep_going = True
 
-# create the main loop to create the number to check
-for i in range(1, limit + 1):
-    j = True
-    # loop to find the smallest number with even division
-    while j:
-        # make the calculation
-        running_result = test_num / i
-        # print it out
-        # print(f"{test_num} / {i} = {running_result}")
-        # check if the number cleanly divides
-        if running_result % test_num == 0:
-            print(f"{test_num} % {running_result} = 0")
-            j = False
-            break
-            # result += 1
+
+# calc should start at twice the initial number?
+
+
+def test_number(test_number, i):
+    count = 1
+    all_good = False
+    for i in range(1, iter_number):
+        if iter_number % count == 0:
+            all_good = False
+            print("false")
+            print(f"{iter_number} % {count} = {iter_number % count}")
         else:
-            test_num += 1
-            #     print("True")
-            break
+            all_good = True
+            print("true")
+            print(f"{iter_number} % {count} = {iter_number % count}")
+        count += 1
+    return all_good
+
+
+for i in range(2, start_num + 1):
+    number = start_num
+
+    while keep_going:
+        if number % i == 0 and i != number:
+            print(f"Yes - {number} % {i} = {number % i}")
+            # got a match, now test the other numbers against this one
+
+            keep_going = test_number(number, i)
+        elif number % i != 0 and i != number:
+            print(f"No - {number} % {i} = {number % i}")
